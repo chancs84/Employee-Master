@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Employee Detail</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <div class="container">
+    
+
+    <h1>Employee Detail</h1>
+    <table>
+      <tbody>
+        <tr>
+          <td>Name</td>
+          <td>:</td>
+          <td>
+            <%= employee.name %>
+          </td>
+        </tr>
+        <tr>
+          <td>Position</td>
+          <td>:</td>
+          <td>
+            <%= employee.designation %>
+          </td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>:</td>
+          <td>
+            <%= employee.emailID %>
+          </td>
+        </tr>
+        <tr>
+          <td>Age</td>
+          <td>:</td>
+          <td>
+            <%= employee.age %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h3><a href="/edit/<%= employee._id%>">EDIT</a></h3>
+    <form action="/delete/<%= employee._id%>" method="post">
+      <button type="submit">DELETE</button>
+    </form>
+    <h3><a href="/">Back to List</a></h3>
+  </div>
+</body>
+
+</html>
